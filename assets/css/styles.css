@@ -65,7 +65,7 @@ header .menu-ul {
   font-size: 1rem;
   color: var(--white);
   border: 1px solid var(--white);
-  padding: .8rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 0.5rem;
 }
 .menu-ul a:hover,
@@ -85,11 +85,135 @@ header .menu-ul {
   margin-bottom: 5px;
 }
 
-@media (max-width: 768px) { 
-.menu-burguer-container {
+@media (max-width: 768px) {
+  .menu-burguer-container {
+    display: block;
+  }
+  .menu-nav {
+    display: none;
+  }
+}
+
+/* Banner*/
+
+.burguer-banner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4.375rem;
+}
+.burguer-banner .leftContent {
+  margin-bottom: 10rem;
+}
+.burguer-banner .leftContent h1 {
+  font-size: 4.5rem;
+  font-family: "Calistoga";
+  font-weight: 400;
+  padding-bottom: 3.5rem;
+  line-height: 4.625rem;
+}
+.burguer-banner .leftContent p {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem;
+  padding-bottom: 4.5rem;
+}
+.burguer-banner .leftContent a {
   display: block;
+  width: max-content;
+  color: var(--white);
+  background-color: var(--orange);
+  padding: 1rem 5.19rem;
+  border-radius: 0.3125rem;
 }
-.menu-nav {
-  display: none;
+
+.burguer-banner .rightContent img {
+  max-height: 600px;
 }
+
+@media (max-width: 1024px) {
+  .burguer-banner .leftContent h1 {
+    font-size: 3.5rem;
+  }
+  .burguer-banner .rightContent img {
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .burguer-banner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .burguer-banner .leftContent h1 {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+  }
+  .burguer-banner .leftContent p {
+    font-size: 1.3rem;
+    padding-bottom: 2.5rem;
+  }
+  .burguer-banner .rightContent img {
+    max-height: 300px;
+  }
+  .burguer-banner .leftContent {
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* BURGUER SEARCH*/
+
+.burguer-search {
+  margin-top: -8rem;
+  background-color: var(--bg-secondary);
+  padding: 4rem 0;
+  width: 100%;
+}
+.container-search {
+  display: flex;
+  justify-content: space-between;
+}
+.burguer-search h2 {
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+.container-input,
+.container-select {
+  background-color: var(--bg-tertiary);
+  border-radius: 0.3rem;
+}
+.container-input input,
+.container-select select {
+  background-color: transparent;
+  width: 100%;
+  padding: 1rem 3rem;
+  border: none;
+  outline: none;
+  color: var(--text-gray);
+  font-size: 1.2rem;
+}
+.container-select select {
+  border-right: 20px solid transparent;
+}
+.container-input input {
+  background: url("../img/searchIcon.png") no-repeat;
+  background-position: left center;
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .burguer-search {
+    margin-top: -4rem;
+  }
+  .container-search {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .burguer-search h2 {
+    text-align: center;
+  }
 }
