@@ -275,3 +275,33 @@ header .menu-ul {
   font-weight: 600;
   color: var(--orange);
 }
+
+@media (max-width: 1024px) {
+  .burguer-list-container {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .burguer-list-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* FOOTER*/
+
+.footer-bg {
+  background-color: var(--bg-secondary);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-container .powered {
+  font-size: 0.7rem;
+  color: var(--text-gray);
+}
